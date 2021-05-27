@@ -1,0 +1,15 @@
+var body = document.getElementById('gradient'); // 바디 태그
+var color1 = document.querySelector('.color1'); // 컬러 입력창1
+var color2 = document.querySelector('.color2'); // 컬러 입력창2
+var h3 = document.querySelector('h3');          // 빈태그 h3
+
+// 이벤트 연결
+color1.addEventListener('input', setGrid);
+color2.addEventListener('input', setGrid);
+
+function setGrid() {
+    body.style.background = "linear-gradient(to right, " + color1.value + " , " + color2.value + ")"
+    h3.textContent = body.style.background;
+}
+
+
